@@ -42,6 +42,11 @@ jobs:
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
 
+      - name: Rebuild native modules for Electron
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: npx @electron/rebuild
+
       - name: Build Windows installer (NSIS)
         if: runner.os == 'Windows'
         shell: pwsh
