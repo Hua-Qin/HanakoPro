@@ -38,6 +38,10 @@ jobs:
         shell: pwsh
         run: node scripts/build-windows-sandbox-helper.mjs x64
 
+      - name: Setup MSVC for node-gyp
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: Build Windows installer (NSIS)
         if: runner.os == 'Windows'
         shell: pwsh
