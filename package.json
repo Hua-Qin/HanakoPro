@@ -127,6 +127,7 @@
     "appId": "com.hanakopro.app",
     "productName": "HanakoPro",
     "asar": true,
+    "npmRebuild": false,
     "afterPack": "./scripts/fix-modules.cjs",
     "extraMetadata": {
       "main": "desktop/main.bundle.cjs"

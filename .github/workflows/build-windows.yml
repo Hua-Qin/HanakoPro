@@ -58,8 +58,7 @@ jobs:
       - name: Build Windows installer (NSIS)
         if: runner.os == 'Windows'
         shell: pwsh
-        run: |
-          npx electron-builder --win nsis --publish never -c '{"npmRebuild": false}'
+        run: npx electron-builder --win nsis --publish never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
