@@ -42,10 +42,18 @@ jobs:
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
 
-      - name: Rebuild native modules for Electron
+      - name: Rebuild node-pty for Electron
         if: runner.os == 'Windows'
         shell: pwsh
-        run: npx @electron/rebuild
+        working-directory: node_modules/node-pty
+        run: npx node-gyp rebuild
+        env:
+          npm_config_target: "38.8.4"
+          npm_config_arch: x64
+          npm_config_target_arch: x64
+          npm_config_disturl: https://electronjs.org/headers
+          npm_config_runtime: electron
+          npm_config_build_from_source: "true"
 
       - name: Build Windows installer (NSIS)
         if: runner.os == 'Windows'
