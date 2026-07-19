@@ -1,0 +1,57 @@
+name: Build Windows
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download & prune PortableGit
+        if: runner.os == 'Windows'
+        run: node scripts/download-git-portable.js
+
+      - name: Build client bundles (main + preload + renderer + theme)
+        run: npm run build:client
+
+      - name: Build server bundle (win32 x64)
+        shell: pwsh
+        run: node scripts/build-server.mjs win32 x64
+
+      - name: Build Windows sandbox helper
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: node scripts/build-windows-sandbox-helper.mjs x64
+
+      - name: Build Windows installer (NSIS)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: npx electron-builder --win nsis --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Windows artifacts
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: HanakoPro-Windows-x64
+          retention-days: 14
+          path: |
+            dist/*.exe
+            dist/latest*.yml
+          if-no-files-found: error
