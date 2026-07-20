@@ -1,0 +1,15 @@
+﻿2026-07-19T19:36:51.5941710Z ##[group]Run node scripts/download-git-portable.js
+2026-07-19T19:36:51.5942169Z [36;1mnode scripts/download-git-portable.js[0m
+2026-07-19T19:36:51.6003663Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-07-19T19:36:51.6004017Z ##[endgroup]
+2026-07-19T19:36:51.9405036Z [download-git-portable] Downloading PortableGit 2.54.0...
+2026-07-19T19:36:52.0217218Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-07-19T19:36:52.0219871Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-07-19T19:36:52.0220397Z 
+2026-07-19T19:36:52.1101646Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-07-19T19:36:52.1102919Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-07-19T19:36:52.1103848Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-07-19T19:36:52.3080097Z 
+2026-07-19T19:36:52.3081293Z 100 56.2M  100 56.2M    0     0   194M      0 --:--:-- --:--:-- --:--:--  194M
+2026-07-19T19:36:52.3639790Z [download-git-portable] Extracting...
+2026-07-19T19:37:02.5775775Z [download-git-portable] PortableGit 2.54.0 ready at D:\a\HanakoPro\HanakoPro\vendor\git-portable

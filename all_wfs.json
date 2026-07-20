@@ -1,0 +1,50 @@
+﻿[
+    {
+        "id":  316303310,
+        "node_id":  "W_kwDOTdc5vM4S2mfO",
+        "name":  "Build Windows",
+        "path":  ".github/workflows/build-windows.yml",
+        "state":  "active",
+        "created_at":  "2026-07-20T03:09:42.000+08:00",
+        "updated_at":  "2026-07-20T03:09:42.000+08:00",
+        "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/workflows/316303310",
+        "html_url":  "https://github.com/Hua-Qin/HanakoPro/blob/main/.github/workflows/build-windows.yml",
+        "badge_url":  "https://github.com/Hua-Qin/HanakoPro/workflows/Build%20Windows/badge.svg"
+    },
+    {
+        "id":  316303311,
+        "node_id":  "W_kwDOTdc5vM4S2mfP",
+        "name":  "Build",
+        "path":  ".github/workflows/build.yml",
+        "state":  "active",
+        "created_at":  "2026-07-20T03:09:42.000+08:00",
+        "updated_at":  "2026-07-20T03:09:42.000+08:00",
+        "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/workflows/316303311",
+        "html_url":  "https://github.com/Hua-Qin/HanakoPro/blob/main/.github/workflows/build.yml",
+        "badge_url":  "https://github.com/Hua-Qin/HanakoPro/workflows/Build/badge.svg"
+    },
+    {
+        "id":  316303312,
+        "node_id":  "W_kwDOTdc5vM4S2mfQ",
+        "name":  "CI",
+        "path":  ".github/workflows/ci.yml",
+        "state":  "active",
+        "created_at":  "2026-07-20T03:09:42.000+08:00",
+        "updated_at":  "2026-07-20T03:09:42.000+08:00",
+        "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/workflows/316303312",
+        "html_url":  "https://github.com/Hua-Qin/HanakoPro/blob/main/.github/workflows/ci.yml",
+        "badge_url":  "https://github.com/Hua-Qin/HanakoPro/workflows/CI/badge.svg"
+    },
+    {
+        "id":  316303313,
+        "node_id":  "W_kwDOTdc5vM4S2mfR",
+        "name":  "Close Pull Requests",
+        "path":  ".github/workflows/close-prs.yml",
+        "state":  "active",
+        "created_at":  "2026-07-20T03:09:42.000+08:00",
+        "updated_at":  "2026-07-20T03:09:42.000+08:00",
+        "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/workflows/316303313",
+        "html_url":  "https://github.com/Hua-Qin/HanakoPro/blob/main/.github/workflows/close-prs.yml",
+        "badge_url":  "https://github.com/Hua-Qin/HanakoPro/workflows/Close%20Pull%20Requests/badge.svg"
+    }
+]

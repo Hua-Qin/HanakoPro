@@ -65,8 +65,8 @@ export function ModelSelector({ models, sessionModel, isStreaming = false, loadS
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ sessionPath: currentSessionPath, modelId, provider }),
         });
+        // hanaFetch 已保证 res.ok，此处直接解析
         const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'switch failed');
 
         if (data.model) {
           useStore.getState().updateSessionModel(currentSessionPath, data.model);
@@ -102,14 +102,25 @@ export function ModelSelector({ models, sessionModel, isStreaming = false, loadS
         useStore.setState({ models: data.models || [] });
       }
     } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      if (message.includes('cannot switch model while streaming')) {
+      const rawMessage = err instanceof Error ? err.message : String(err);
+      if (rawMessage.includes('cannot switch model while streaming')) {
         useStore.getState().addToast(t('model.switchWhileStreaming'), 'warning', 4000, {
           dedupeKey: 'model-switch-streaming',
         });
       } else {
         console.error('[model] switch failed:', err);
-        useStore.getState().addToast(message || t('model.switchFailed'), 'error');
+        // 提取后端返回的具体错误信息，去掉 hanaFetch 前缀
+        const detail = (err as any)?.body;
+        let displayMsg = t('model.switchFailed');
+        if (detail) {
+          try {
+            const parsed = JSON.parse(detail);
+            if (parsed?.error) displayMsg = String(parsed.error);
+          } catch {
+            displayMsg = detail;
+          }
+        }
+        useStore.getState().addToast(displayMsg, 'error');
       }
       setLoading(false);
       useStore.getState().setModelSwitching(false);

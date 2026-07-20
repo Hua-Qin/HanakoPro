@@ -1,0 +1,145 @@
+﻿{
+    "total_count":  1,
+    "jobs":  [
+                 {
+                     "id":  88228396082,
+                     "run_id":  29700401593,
+                     "workflow_name":  "Build Windows",
+                     "head_branch":  "main",
+                     "run_url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/runs/29700401593",
+                     "run_attempt":  1,
+                     "node_id":  "CR_kwDOTdc5vM8AAAAUitJ8Mg",
+                     "head_sha":  "035b00bf9e1b7bc3007aaca74aae1b8fa9da0d65",
+                     "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/jobs/88228396082",
+                     "html_url":  "https://github.com/Hua-Qin/HanakoPro/actions/runs/29700401593/job/88228396082",
+                     "status":  "completed",
+                     "conclusion":  "failure",
+                     "created_at":  "2026-07-19T19:20:32Z",
+                     "started_at":  "2026-07-19T19:20:37Z",
+                     "completed_at":  "2026-07-19T19:25:06Z",
+                     "name":  "build-windows",
+                     "steps":  [
+                                   {
+                                       "name":  "Set up job",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  1,
+                                       "started_at":  "2026-07-19T19:20:38Z",
+                                       "completed_at":  "2026-07-19T19:20:41Z"
+                                   },
+                                   {
+                                       "name":  "Run actions/checkout@v4",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  2,
+                                       "started_at":  "2026-07-19T19:20:41Z",
+                                       "completed_at":  "2026-07-19T19:20:49Z"
+                                   },
+                                   {
+                                       "name":  "Setup Node.js",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  3,
+                                       "started_at":  "2026-07-19T19:20:49Z",
+                                       "completed_at":  "2026-07-19T19:20:55Z"
+                                   },
+                                   {
+                                       "name":  "Install dependencies",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  4,
+                                       "started_at":  "2026-07-19T19:20:55Z",
+                                       "completed_at":  "2026-07-19T19:22:02Z"
+                                   },
+                                   {
+                                       "name":  "Download \u0026 prune PortableGit",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  5,
+                                       "started_at":  "2026-07-19T19:22:02Z",
+                                       "completed_at":  "2026-07-19T19:22:14Z"
+                                   },
+                                   {
+                                       "name":  "Build client bundles (main + preload + renderer + theme)",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  6,
+                                       "started_at":  "2026-07-19T19:22:14Z",
+                                       "completed_at":  "2026-07-19T19:22:44Z"
+                                   },
+                                   {
+                                       "name":  "Build server bundle (win32 x64)",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  7,
+                                       "started_at":  "2026-07-19T19:22:44Z",
+                                       "completed_at":  "2026-07-19T19:24:30Z"
+                                   },
+                                   {
+                                       "name":  "Build Windows sandbox helper",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  8,
+                                       "started_at":  "2026-07-19T19:24:30Z",
+                                       "completed_at":  "2026-07-19T19:24:46Z"
+                                   },
+                                   {
+                                       "name":  "Setup MSVC for node-gyp",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  9,
+                                       "started_at":  "2026-07-19T19:24:46Z",
+                                       "completed_at":  "2026-07-19T19:24:48Z"
+                                   },
+                                   {
+                                       "name":  "Build Windows installer (NSIS)",
+                                       "status":  "completed",
+                                       "conclusion":  "failure",
+                                       "number":  10,
+                                       "started_at":  "2026-07-19T19:24:48Z",
+                                       "completed_at":  "2026-07-19T19:25:02Z"
+                                   },
+                                   {
+                                       "name":  "Upload Windows artifacts",
+                                       "status":  "completed",
+                                       "conclusion":  "skipped",
+                                       "number":  11,
+                                       "started_at":  "2026-07-19T19:25:02Z",
+                                       "completed_at":  "2026-07-19T19:25:02Z"
+                                   },
+                                   {
+                                       "name":  "Post Setup Node.js",
+                                       "status":  "completed",
+                                       "conclusion":  "skipped",
+                                       "number":  21,
+                                       "started_at":  "2026-07-19T19:25:02Z",
+                                       "completed_at":  "2026-07-19T19:25:02Z"
+                                   },
+                                   {
+                                       "name":  "Post Run actions/checkout@v4",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  22,
+                                       "started_at":  "2026-07-19T19:25:02Z",
+                                       "completed_at":  "2026-07-19T19:25:04Z"
+                                   },
+                                   {
+                                       "name":  "Complete job",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "number":  23,
+                                       "started_at":  "2026-07-19T19:25:04Z",
+                                       "completed_at":  "2026-07-19T19:25:04Z"
+                                   }
+                               ],
+                     "check_run_url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/check-runs/88228396082",
+                     "labels":  [
+                                    "windows-latest"
+                                ],
+                     "runner_id":  1000000866,
+                     "runner_name":  "GitHub Actions 1000000866",
+                     "runner_group_id":  0,
+                     "runner_group_name":  "GitHub Actions"
+                 }
+             ]
+}

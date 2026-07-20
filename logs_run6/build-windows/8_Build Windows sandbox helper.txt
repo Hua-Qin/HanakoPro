@@ -1,0 +1,10 @@
+﻿2026-07-19T19:39:19.0534158Z ##[group]Run node scripts/build-windows-sandbox-helper.mjs x64
+2026-07-19T19:39:19.0534820Z [36;1mnode scripts/build-windows-sandbox-helper.mjs x64[0m
+2026-07-19T19:39:19.0601450Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-07-19T19:39:19.0601930Z ##[endgroup]
+2026-07-19T19:39:19.3860706Z [windows-sandbox-helper] building D:\a\HanakoPro\HanakoPro\dist-sandbox\win-x64\hana-win-sandbox.exe
+2026-07-19T19:39:20.0774260Z **********************************************************************
+2026-07-19T19:39:20.0775101Z ** Visual Studio 2026 Developer Command Prompt v18.7.3
+2026-07-19T19:39:20.0775777Z ** Copyright (c) 2026 Microsoft Corporation
+2026-07-19T19:39:20.0776495Z **********************************************************************
+2026-07-19T19:39:22.3273699Z main.cpp

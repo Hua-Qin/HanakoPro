@@ -384,6 +384,21 @@ function InputAreaInner({ cardRef }: InputAreaInnerProps) {
     return () => window.clearTimeout(timer);
   }, [inputFocusTrigger, inputEditorResetTrigger, editor]);
 
+  // 窗口重新获得焦点时，确保 TipTap 编辑器恢复可编辑状态。
+  // Electron 原生 dialog（confirm/alert）或窗口切换后，编辑器可能进入 isEditable=false
+  // 导致输入框无法输入/无法选中。见 #521 相关用户反馈。
+  useEffect(() => {
+    if (!editor) return;
+    const restoreEditable = () => {
+      if (editor.isDestroyed) return;
+      if (typeof editor.setEditable === 'function' && !editor.isEditable) {
+        editor.setEditable(true);
+      }
+    };
+    window.addEventListener('focus', restoreEditable);
+    return () => window.removeEventListener('focus', restoreEditable);
+  }, [editor]);
+
   // Doc context
   const currentDoc = useMemo(() => {
     if (!previewOpen || !activeTabId) return null;
@@ -761,6 +776,10 @@ function InputAreaInner({ cardRef }: InputAreaInnerProps) {
   // ── Send message ──
   const handleSend = useCallback(async () => {
     if (!editor) return;
+    // 防御：编辑器可能因窗口焦点丢失而进入 isEditable=false，发送前主动恢复
+    if (typeof editor.setEditable === 'function' && !editor.isEditable) {
+      editor.setEditable(true);
+    }
     const editorJson = editor.getJSON();
     const { text: rawText, skills, fileRefs } = serializeEditor(editorJson);
     const text = rawText.trim();

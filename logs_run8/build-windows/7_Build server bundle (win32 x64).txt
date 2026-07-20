@@ -1,0 +1,77 @@
+﻿2026-07-19T19:47:49.7342066Z ##[group]Run node scripts/build-server.mjs win32 x64
+2026-07-19T19:47:49.7343111Z [36;1mnode scripts/build-server.mjs win32 x64[0m
+2026-07-19T19:47:49.7422050Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-07-19T19:47:49.7422422Z ##[endgroup]
+2026-07-19T19:47:50.0575426Z [build-server] Building for win32-x64...
+2026-07-19T19:47:50.0589033Z [build-server] downloading Node.js v22.16.0 for win32-x64...
+2026-07-19T19:47:50.0805770Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-07-19T19:47:50.0806690Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-07-19T19:47:50.0807133Z 
+2026-07-19T19:47:50.4571186Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-07-19T19:47:50.4572186Z 100 33.8M  100 33.8M    0     0  89.4M      0 --:--:-- --:--:-- --:--:-- 89.9M
+2026-07-19T19:48:44.1508146Z [build-server] Node.js runtime cached
+2026-07-19T19:48:44.1757708Z [build-server] Node.js runtime ready
+2026-07-19T19:48:44.1764696Z [build-server] running Vite bundle...
+2026-07-19T19:48:45.2185328Z [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+2026-07-19T19:48:45.2539226Z transforming...
+2026-07-19T19:48:48.7852480Z [33m"Stats" is imported from external module "node:fs" but never used in "node_modules/chokidar/index.js".[39m
+2026-07-19T19:48:48.7854467Z [33m"execSync" is imported from external module "child_process" but never used in "server/routes/desk.js".[39m
+2026-07-19T19:48:48.7859505Z [32m✓[39m 834 modules transformed.
+2026-07-19T19:48:49.4411122Z rendering chunks...
+2026-07-19T19:48:49.4523358Z computing gzip size...
+2026-07-19T19:48:49.5180786Z [2mdist-server-bundle/[22m[36mindex.js  [39m[1m[33m2,125.97 kB[39m[22m[2m │ gzip: 595.49 kB[22m
+2026-07-19T19:48:49.5184486Z [32m✓ built in 4.29s[39m
+2026-07-19T19:48:49.5891367Z [build-server] Vite bundle copied to bundle/
+2026-07-19T19:48:49.5896493Z [build-server] bootstrap copied
+2026-07-19T19:48:49.5903696Z [build-server]   lib/known-models.json
+2026-07-19T19:48:49.5909547Z [build-server]   lib/known-model-fallbacks.json
+2026-07-19T19:48:49.5916589Z [build-server]   lib/default-models.json
+2026-07-19T19:48:49.5920966Z [build-server]   lib/config.example.yaml
+2026-07-19T19:48:49.5925684Z [build-server]   lib/identity.example.md
+2026-07-19T19:48:49.5938144Z [build-server]   lib/ishiki.example.md
+2026-07-19T19:48:49.5942844Z [build-server]   lib/pinned.example.md
+2026-07-19T19:48:49.5979339Z [build-server]   lib/identity-templates/
+2026-07-19T19:48:49.6007671Z [build-server]   lib/ishiki-templates/
+2026-07-19T19:48:49.6036040Z [build-server]   lib/public-ishiki-templates/
+2026-07-19T19:48:49.6071270Z [build-server]   lib/yuan/
+2026-07-19T19:48:49.6278099Z [build-server]   skills2set/
+2026-07-19T19:48:49.6307449Z [build-server]   desktop/src/locales/
+2026-07-19T19:48:49.6691998Z [build-server]   desktop/src/themes/
+2026-07-19T19:48:49.6781987Z [build-server]   desktop\src\assets\Hanako.png
+2026-07-19T19:48:49.6782918Z [build-server]   desktop\src\assets\Butter.png
+2026-07-19T19:48:49.6783577Z [build-server]   desktop\src\assets\Ming.png
+2026-07-19T19:48:49.6784213Z [build-server]   desktop\src\assets\Kong.png
+2026-07-19T19:48:49.6784886Z [build-server]   desktop\src\assets\character-cards\
+2026-07-19T19:48:49.6914214Z [build-server]   plugins/
+2026-07-19T19:48:49.6914670Z [build-server] resource files copied
+2026-07-19T19:48:49.9725129Z [build-server] derived external deps: better-sqlite3, node-pty, ws, @mariozechner/pi-ai, @mariozechner/pi-coding-agent, @larksuiteoapi/node-sdk, node-telegram-bot-api, exceljs, mammoth, jsdom, qrcode
+2026-07-19T19:48:49.9822837Z [build-server] pinned server deps: better-sqlite3@12.6.2, node-pty@1.1.0, ws@8.19.0, @mariozechner/pi-ai@0.70.5, @mariozechner/pi-coding-agent@0.70.2, @larksuiteoapi/node-sdk@1.59.0, node-telegram-bot-api@0.67.0, exceljs@4.4.0, mammoth@1.11.0, jsdom@29.0.2, qrcode@1.5.4, lru-cache@11.2.7
+2026-07-19T19:48:49.9844467Z [build-server] installing external dependencies...
+2026-07-19T19:49:17.2758670Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-07-19T19:49:17.4503207Z npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+2026-07-19T19:49:17.4966106Z npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+2026-07-19T19:49:17.6530625Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2026-07-19T19:49:17.7303422Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-19T19:49:17.7385036Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-19T19:49:17.7402470Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-19T19:49:18.4577351Z npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+2026-07-19T19:49:18.7802310Z npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-07-19T19:49:18.8054756Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2026-07-19T19:49:18.9923179Z npm warn deprecated fstream@1.0.12: This package is no longer supported.
+2026-07-19T19:49:19.2036830Z npm warn deprecated @mariozechner/pi-agent-core@0.70.6: please use @earendil-works/pi-agent-core instead going forward
+2026-07-19T19:49:19.4901681Z npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-07-19T19:49:20.1346241Z npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-07-19T19:49:20.1350602Z npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-07-19T19:49:20.9662884Z npm warn deprecated @mariozechner/pi-tui@0.70.6: please use @earendil-works/pi-tui instead going forward
+2026-07-19T19:49:22.0451850Z npm warn deprecated @mariozechner/pi-ai@0.70.5: please use @earendil-works/pi-ai instead going forward
+2026-07-19T19:49:22.1543429Z npm warn deprecated @mariozechner/pi-ai@0.70.6: please use @earendil-works/pi-ai instead going forward
+2026-07-19T19:49:24.7591285Z npm warn deprecated @mariozechner/pi-coding-agent@0.70.2: please use @earendil-works/pi-coding-agent instead going forward
+2026-07-19T19:49:30.1649131Z 
+2026-07-19T19:49:30.1649715Z added 561 packages in 40s
+2026-07-19T19:49:36.1479317Z [verify-pi-sdk] all checks passed
+2026-07-19T19:49:36.1822419Z [build-server] dependencies installed
+2026-07-19T19:49:36.1823123Z [build-server] running nft trace...
+2026-07-19T19:50:03.4631115Z [build-server] nft trace failed (File C:\Users\runneradmin\Documents does not exist.), skipping prune
+2026-07-19T19:50:03.4753281Z [build-server] koffi: kept win32_x64, removed 17 other platform binaries
+2026-07-19T19:50:03.4762088Z [build-server] wrapper created
+2026-07-19T19:50:03.4762470Z [build-server] Done!

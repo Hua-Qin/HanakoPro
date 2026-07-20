@@ -1,0 +1,20 @@
+﻿2026-07-19T19:20:49.8286431Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-19T19:20:49.8289662Z ##[group]Run actions/setup-node@v4
+2026-07-19T19:20:49.8289982Z with:
+2026-07-19T19:20:49.8290228Z   node-version: 22
+2026-07-19T19:20:49.8290457Z   cache: npm
+2026-07-19T19:20:49.8290674Z   always-auth: false
+2026-07-19T19:20:49.8290913Z   check-latest: false
+2026-07-19T19:20:49.8294243Z   token: ***
+2026-07-19T19:20:49.8294430Z ##[endgroup]
+2026-07-19T19:20:50.0705770Z Found in cache @ C:\hostedtoolcache\windows\node\22.23.1\x64
+2026-07-19T19:20:50.0713295Z (node:1536) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-19T19:20:50.0714093Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-19T19:20:50.0717058Z ##[group]Environment details
+2026-07-19T19:20:54.6140354Z node: v22.23.1
+2026-07-19T19:20:54.6140773Z npm: 10.9.8
+2026-07-19T19:20:54.6141039Z yarn: 1.22.22
+2026-07-19T19:20:54.6142379Z ##[endgroup]
+2026-07-19T19:20:54.7017769Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\22.23.1\x64\npm.cmd config get cache"
+2026-07-19T19:20:55.2354087Z C:\npm\cache
+2026-07-19T19:20:55.7401220Z npm cache is not found

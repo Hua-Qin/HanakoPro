@@ -398,12 +398,18 @@ export async function switchSession(path: string): Promise<void> {
     // Restore input focus only if the user is still in the chat surface that initiated the switch.
     requestChatInputFocus(path);
   } catch (err) {
-    if (myVersion !== _switchVersion || isAbortError(err)) return;
+    // 如果有更新的 switch 接管，让它管理自己的 pendingSessionSwitchPath
+    if (myVersion !== _switchVersion) return;
+    // 清理 pendingSessionSwitchPath（覆盖真实错误和超时 abort 两种场景）
+    // 修复：之前 isAbortError(err) 会提前 return 导致超时时 pendingSessionSwitchPath 卡住，
+    // canSend 永远为 false，输入框无法发送
     useStore.setState((state: Record<string, any>) => (
       state.pendingSessionSwitchPath === path ? { pendingSessionSwitchPath: null } : {}
     ));
-    console.error('[session] switch failed:', err);
-    showSessionSwitchError(path, errorMessage(err));
+    if (!isAbortError(err)) {
+      console.error('[session] switch failed:', err);
+      showSessionSwitchError(path, errorMessage(err));
+    }
   } finally {
     if (_switchAbortController === abortController) {
       _switchAbortController = null;

@@ -1,0 +1,19 @@
+﻿{
+    "total_count":  1,
+    "artifacts":  [
+                      {
+                          "id":  8446665798,
+                          "node_id":  "MDg6QXJ0aWZhY3Q4NDQ2NjY1Nzk4",
+                          "name":  "HanakoPro-Windows-x64",
+                          "size_in_bytes":  417372492,
+                          "url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/artifacts/8446665798",
+                          "archive_download_url":  "https://api.github.com/repos/Hua-Qin/HanakoPro/actions/artifacts/8446665798/zip",
+                          "expired":  false,
+                          "digest":  "sha256:6a01584e832246e92532e2e188797d7a6ca22528ba152818f51416f4c5d8703b",
+                          "created_at":  "2026-07-19T20:04:19Z",
+                          "updated_at":  "2026-07-19T20:04:19Z",
+                          "expires_at":  "2026-08-02T20:04:04Z",
+                          "workflow_run":  "@{id=29701534004; repository_id=1305950652; head_repository_id=1305950652; head_branch=main; head_sha=35d6541c50ac4de876e7bf6847bcc2e8d82c71b8}"
+                      }
+                  ]
+}
