@@ -71,6 +71,7 @@ export function LogsTab() {
 
   // 复制反馈
   const [copiedHint, setCopiedHint] = useState('');
+  const downloadAnchorRef = useRef<HTMLAnchorElement>(null);
 
   const offsetRef = useRef(0);
   const filtersRef = useRef({ levels: '', module: '', keyword: '', timeRange: '24h' });
@@ -229,12 +230,12 @@ export function LogsTab() {
       const res = await hanaFetch(`/api/logs/export?${params.toString()}`);
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `hanako-logs-${Date.now()}.txt`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      const anchor = downloadAnchorRef.current;
+      if (anchor) {
+        anchor.href = url;
+        anchor.download = `hanako-logs-${Date.now()}.txt`;
+        anchor.click();
+      }
       URL.revokeObjectURL(url);
       showCopiedHint(t('settings.logs.exportSuccess'));
     } catch {
@@ -532,6 +533,7 @@ export function LogsTab() {
       )}
 
       {/* 旋转动画 keyframes（如果全局没有） */}
+      <a ref={downloadAnchorRef} style={{ display: 'none' }} />
       <style>{`
         @keyframes hana-spin {
           to { transform: rotate(360deg); }
